@@ -244,6 +244,18 @@
 
     <style name="TextAppearance.QS.Date">
         <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextAppearance.QS.Battery" parent="TextAppearance.QS.Status">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.AppOpsDialog" />
+
+    <style name="TextAppearance.AppOpsDialog.Title">
+        <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
         <item name="android:textColor">?android:attr/textColorPrimary</item>
         <item name="android:textSize">18sp</item>
     </style>
