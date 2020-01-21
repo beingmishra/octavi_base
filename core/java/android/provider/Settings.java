@@ -4844,6 +4844,13 @@ public final class Settings {
           */
         public static final String VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
 
+
+	/**
+         * Show data usage in QS header
+         * @hide
+         */
+        public static final String QS_DATAUSAGE = "qs_datausage";
+
         /**
          * Enable/Disable screenshot sound
          * @hide

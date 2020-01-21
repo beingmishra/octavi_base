@@ -181,6 +181,7 @@ import com.android.systemui.statusbar.CommandQueue;
 import com.android.systemui.statusbar.CrossFadeHelper;
 import com.android.systemui.statusbar.EmptyShadeView;
 import com.android.systemui.statusbar.GestureRecorder;
+import com.android.systemui.statusbar.info.DataUsageView;
 import com.android.systemui.statusbar.KeyboardShortcuts;
 import com.android.systemui.statusbar.KeyguardIndicationController;
 import com.android.systemui.statusbar.NavigationBarController;
