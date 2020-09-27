@@ -39,6 +39,11 @@
    <java-symbol type="bool" name="config_notifyClientOnFingerprintCancelSuccess" />
 
    <!-- Vendor platform signatures -->
-  <java-symbol type="array" name="config_vendorPlatformSignatures" />
+   <java-symbol type="array" name="config_vendorPlatformSignatures" />
+
+   <!-- Path to the library that contains a device specific key handler -->
+   <java-symbol type="string" name="config_deviceKeyHandlerLib" />
+   <!-- Name of that key handler class -->
+   <java-symbol type="string" name="config_deviceKeyHandlerClass" />
 
 </resources>
