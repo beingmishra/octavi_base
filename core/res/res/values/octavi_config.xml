@@ -55,4 +55,8 @@
          config to 7. -->
     <integer name="config_deviceHardwareKeys">64</integer>
 
+    <!-- Button backlight -->
+    <dimen name="config_buttonBrightnessSettingDefaultFloat">1.0</dimen>
+    <bool name="config_deviceHasVariableButtonBrightness">false</bool>
+
 </resources>

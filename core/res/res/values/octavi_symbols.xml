@@ -51,4 +51,8 @@
    <java-symbol type="anim" name="custom_app_out" />
    <java-symbol type="integer" name="config_deviceHardwareKeys" />
 
+   <!-- Button backlight -->
+   <java-symbol type="dimen" name="config_buttonBrightnessSettingDefaultFloat" />
+   <java-symbol type="bool" name="config_deviceHasVariableButtonBrightness" />
+
 </resources>
