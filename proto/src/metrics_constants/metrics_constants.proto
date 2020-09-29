@@ -7431,5 +7431,7 @@ message MetricsEvent {
 
     //OCTAVI-OS 
     OCTAVI = 1999;
+
+    VENOM = 9548;
   }
 }

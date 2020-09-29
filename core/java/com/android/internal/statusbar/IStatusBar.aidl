@@ -235,4 +235,5 @@ oneway interface IStatusBar
      * Octavi
      */
     void toggleCameraFlash();
+    void toggleCameraFlashState(boolean enable);
 }

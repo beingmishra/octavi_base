@@ -2047,7 +2047,7 @@ public class StatusBar extends SystemUI implements DemoMode,
         }
     }
 
-     @Override
+    @Override
     public void toggleCameraFlash() {
         if (DEBUG) {
             Log.d(TAG, "Toggling camera flashlight");
@@ -2057,6 +2057,17 @@ public class StatusBar extends SystemUI implements DemoMode,
         }
     }
 
+    @Override
+    public void toggleCameraFlashState(boolean enable) {
+        if (DEBUG) {
+            Log.d(TAG, "Disabling camera flashlight");
+        }
+        if (mFlashlightController != null) {
+            if (mFlashlightController.hasFlashlight() && mFlashlightController.isAvailable()) {
+                mFlashlightController.setFlashlight(enable);
+            }
+        }
+    }
     void makeExpandedVisible(boolean force) {
         if (SPEW) Log.d(TAG, "Make expanded visible: expanded visible=" + mExpandedVisible);
         if (!force && (mExpandedVisible || !mCommandQueue.panelsEnabled())) {
