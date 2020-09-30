@@ -65,4 +65,7 @@
    <java-symbol type="string" name="config_bodyFontFamily" />
    <java-symbol type="string" name="config_bodyFontFamilyMedium" />
 
+   <!-- Whether device has dash charging support -->
+   <java-symbol type="bool" name="config_hasDashCharger" />
+
 </resources>
