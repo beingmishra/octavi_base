@@ -62,6 +62,7 @@ import com.android.systemui.statusbar.policy.BrightnessMirrorController.Brightne
 import com.android.systemui.tuner.TunerService;
 import com.android.systemui.tuner.TunerService.Tunable;
 import com.android.systemui.util.animation.DisappearParameters;
+import com.android.systemui.statusbar.info.DataUsageView;
 
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
@@ -105,6 +106,7 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
     protected boolean mUsingMediaPlayer;
     private int mVisualMarginStart;
     private int mVisualMarginEnd;
+    private boolean dataupdated = true;
 
     protected boolean mExpanded;
     protected boolean mListening;

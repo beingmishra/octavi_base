@@ -41,18 +41,24 @@
             android:layout_height="match_parent"
             android:layout_weight="@integer/qs_footer_actions_weight"
             android:gravity="center_vertical|start" >
-            <com.android.systemui.statusbar.AlphaOptimizedImageView
-                android:id="@android:id/edit"
-                android:layout_width="@dimen/qs_footer_action_button_size"
-                android:layout_height="@dimen/qs_footer_action_button_size"
-                android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
-                android:clipToPadding="false"
-                android:contentDescription="@string/accessibility_quick_settings_edit"
-                android:focusable="true"
-                android:padding="@dimen/qs_footer_icon_padding"
-                android:src="@*android:drawable/ic_mode_edit"
-                android:tint="?android:attr/colorForeground"/>
+        <include layout="@layout/qs_carrier_group"
+                 android:id="@+id/carrier_group"
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:layout_marginStart="@dimen/qs_status_separator"
+                 android:layout_gravity="start|center_vertical"
+                 android:focusable="false"/>
+
+        <com.android.systemui.statusbar.info.DataUsageView
+             android:id="@+id/data_sim_usage"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:gravity="center_vertical"
+             android:paddingStart="1dp"
+             android:paddingEnd="1dp"
+             android:textAppearance="@style/TextAppearance.StatusBar.Clock"
+             android:singleLine="true"
+             android:text="" />
 
             <TextView
                 android:id="@+id/build"
@@ -67,12 +73,11 @@
                 android:layout_marginEnd="4dp"
                 android:visibility="gone"/>
          </com.android.keyguard.AlphaOptimizedLinearLayout>
-
         <com.android.systemui.qs.PageIndicator
             android:id="@+id/footer_page_indicator"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
+            android:layout_gravity="center"
             android:visibility="gone" />
 
         <com.android.keyguard.AlphaOptimizedLinearLayout
@@ -81,12 +86,14 @@
             android:layout_height="match_parent"
             android:layout_weight="@integer/qs_footer_actions_weight"
             android:gravity="center_vertical|end" >
+
             <com.android.systemui.statusbar.phone.MultiUserSwitch
                 android:id="@+id/multi_user_switch"
                 android:layout_width="@dimen/qs_footer_action_button_size"
                 android:layout_height="@dimen/qs_footer_action_button_size"
                 android:layout_alignParentEnd="true"
                 android:background="@drawable/ripple_drawable"
+                android:visibility="invisible"
                 android:focusable="true">
 
                 <ImageView
@@ -96,6 +103,19 @@
                     android:layout_gravity="center"
                     android:scaleType="centerInside"/>
             </com.android.systemui.statusbar.phone.MultiUserSwitch>
+
+            <com.android.systemui.statusbar.AlphaOptimizedImageView
+                android:id="@android:id/edit"
+                android:layout_width="@dimen/qs_footer_action_button_size"
+                android:layout_height="@dimen/qs_footer_action_button_size"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:clipToPadding="false"
+                android:contentDescription="@string/accessibility_quick_settings_edit"
+                android:focusable="true"
+                android:padding="@dimen/qs_footer_icon_padding"
+                android:src="@*android:drawable/ic_mode_edit"
+                android:tint="?android:attr/colorForeground"/>
 
             <com.android.systemui.statusbar.AlphaOptimizedFrameLayout
                 android:id="@+id/settings_button_container"
