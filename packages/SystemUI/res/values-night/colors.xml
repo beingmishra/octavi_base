@@ -104,4 +104,6 @@
 
     <color name="qs_tile_background_color_disabled">#0fffffff</color>
 
+
+    <color name="status_bar_clock_color">@android:color/white</color>
 </resources>
