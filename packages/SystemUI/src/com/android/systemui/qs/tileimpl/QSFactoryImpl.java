@@ -37,6 +37,7 @@ import com.android.systemui.qs.tiles.DataSwitchTile;
 import com.android.systemui.qs.tiles.DndTile;
 import com.android.systemui.qs.tiles.FlashlightTile;
 import com.android.systemui.qs.tiles.HotspotTile;
+import com.android.systemui.qs.tiles.HWKeysTile;
 import com.android.systemui.qs.tiles.LocationTile;
 import com.android.systemui.qs.tiles.MonoToggleTile;
 import com.android.systemui.qs.tiles.NfcTile;
@@ -86,6 +87,7 @@ public class QSFactoryImpl implements QSFactory {
     private final Provider<RebootTile> mRebootTileProvider;
     private final Provider<MonoToggleTile> mMonoToggleTileProvider;
     private final Provider<ScreenshotTile> mScreenshotTileProvider;
+    private final Provider<HWKeysTile> mHWKeysTileProvider;
 
     private final Lazy<QSHost> mQsHostLazy;
 
@@ -114,7 +116,8 @@ public class QSFactoryImpl implements QSFactory {
             Provider<DataSwitchTile> dataSwitchTileProvider,
             Provider<RebootTile> rebootTileProvider,
             Provider<MonoToggleTile> monoToggleTileProvider,
-            Provider<ScreenshotTile> screenshotTileProvider) {
+            Provider<ScreenshotTile> screenshotTileProvider,
+            Provider<HWKeysTile> hWKeysTileProvider) {
         mQsHostLazy = qsHostLazy;
         mWifiTileProvider = wifiTileProvider;
         mBluetoothTileProvider = bluetoothTileProvider;
@@ -140,6 +143,7 @@ public class QSFactoryImpl implements QSFactory {
         mRebootTileProvider = rebootTileProvider;
         mMonoToggleTileProvider = monoToggleTileProvider;
         mScreenshotTileProvider = screenshotTileProvider;
+        mHWKeysTileProvider = hWKeysTileProvider;
     }
 
     public QSTile createTile(String tileSpec) {
@@ -199,6 +203,8 @@ public class QSFactoryImpl implements QSFactory {
                 return mMonoToggleTileProvider.get();
             case "screenshot":
                 return mScreenshotTileProvider.get();
+            case "hwkeys":
+                return mHWKeysTileProvider.get();
         }
 
         // Custom tiles
