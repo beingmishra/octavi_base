@@ -48,7 +48,8 @@
             android:orientation="vertical"
             android:translationZ="@dimen/volume_dialog_elevation"
             android:clipChildren="false"
-            android:clipToPadding="false">
+            android:clipToPadding="false"
+            android:background="@drawable/rounded_volume_background" >
             <LinearLayout
                 android:id="@+id/volume_dialog_rows"
                 android:layout_width="wrap_content"
@@ -69,7 +70,7 @@
             android:layout_gravity="right"
             android:clipToPadding="false"
             android:translationZ="@dimen/volume_dialog_elevation"
-            android:background="@drawable/rounded_bg_full"
+            android:background="@drawable/rounded_volume_background"
             android:orientation="vertical">
 
             <FrameLayout
