@@ -36,11 +36,12 @@
         android:textAppearance="@style/TextAppearance.QS.Date"
         systemui:datePattern="@string/abbrev_wday_month_day_no_year_alarm" />
 
-	<LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-	        android:layout_gravity="center_vertical"
-	        android:gravity="end">
+    <android.widget.Space
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal" />
 
             <com.android.systemui.statusbar.AlphaOptimizedFrameLayout
                 android:id="@+id/settings_button_container"
@@ -64,5 +65,4 @@
                     android:scaleType="centerInside"
                     android:tint="?android:attr/colorForeground"/>
             </com.android.systemui.statusbar.AlphaOptimizedFrameLayout>
-	</LinearLayout>
 </LinearLayout>
