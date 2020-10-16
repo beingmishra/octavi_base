@@ -44,4 +44,6 @@
     <dimen name="fod_animation_size">280dp</dimen>
     <dimen name="fod_animation_offset">0dp</dimen>
 
+    <!-- QS Header data usage info -->
+    <string name="usage_data">used</string>
 </resources>
