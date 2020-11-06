@@ -44,7 +44,7 @@ import android.util.Range;
 import com.android.internal.R;
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.internal.util.ArrayUtils;
-import com.android.internal.util.octavi.OctaviUtils.java;
+import com.android.internal.util.octavi.OctaviUtils;
 
 import java.time.ZonedDateTime;
 import java.util.Iterator;
